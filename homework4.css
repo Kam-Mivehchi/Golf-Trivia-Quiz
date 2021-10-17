@@ -1,0 +1,26 @@
+div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner{
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.main-content{
+    display:block;
+    justify-items: center;
+    align-content: center;
+}
