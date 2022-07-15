@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./reset.css">
     <link rel="stylesheet" type="text/css" href="./homework4.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
 </head>
 
 <body>
+    <header>
+        <h2>Highscores</h2>
+    </header>
+    <main>
+        <section class="landing">
 
-    <div class="banner">
-        <h2 class= "highscore" href ="04-Web-APIs\02-Homework\highscore.html">View Highscore</h2>
-        <h2 id="count">Time Left:</h2>
-    </div>
-    <div id="main-content">
-        <h1>
-        Coding Quiz Challenge<hr>
-        </h1>
-        
-        <p>
-        Try to anser the following code-related questions within the time limit.
-        Keep in mind that incorrect answers will penalize your score/time by ten seconds!
-        </p>
-        
-    </div>
-    <button id="start" >Start the quiz</button>
-   
-    <script src ='./homework4.js'></script>
+            <h1>Coding Quiz Challenge</h1>
+            <p>
+                Try to anser the following code-related questions within the time limit.
+                Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+            </p>
+            <h2 id="count">Time Left:</h2>
+            <button id="start">Start the quiz</button>
+        </section>
+        <section class="quiz">
+            <h2></h2>
+            <div class="choice-wrapper">
+
+            </div>
+
+        </section>
+    </main>
+
+
+    <script src='./homework4.js'></script>
 </body>
+
 </html>
