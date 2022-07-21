@@ -1,81 +1,4 @@
-var answersOne = [
-  "<button>2</button>",
-  "<button>5</button>",
-  "<button>33</button>",
-  "<button>3</button>"
-]
-var answersTwo = [
-  "<button>Brendan Eich</button>",
-  "<button>Sheryl Sandberg</button>",
-  "<button>Douglas Crockford</button>"
-]
-var answersThree = [
-  "<button>npm</button>",
-  "<button>TypeScript</button>",
-  "<button>Node.js</button>",
-]
-var answersFour = [
-  "<button> ESLint</button>",
-  "<button> RequireJS</button>",
-  "<button>jQuery</button>",
-  "<button>Angular</button>"
-]
-var answersFive = [
-  "<button>Undefined</button>",
-  "<button> Number</button>",
-  "<button>Boolean</button>",
-  "<button>Float</button>"
-]
-var answersSix = [
-  "<button>IBM</button>",
-  "<button>Sun Microsystems</button>",
-  "<button>Bell Labs</button>",
-  "<button>Netscape</button>"
-]
-var answersSeven = [
-  "<button>' <style>'</button>",
-  "<button> <meta></button>",
-  "<button><script></button>"
-]
-var answersEight = [
-  "<button>Less server interaction</button>",
-  "<button>Increased interactivity</button>",
-  "<button>Richer interfaces</button>",
-  "<button>All of the above</button>"
-]
-var answersNine = [
-  "<button> Client-side JavaScript does not allow the reading or writing of files</button>",
-  "<button>  JavaScript doesn't have any multi-threading or multiprocessor capabilities</button>",
-  "<button>All of the above</button>"
-]
 
-
-
-
-var answerArray = [
-  answersOne,
-  answersTwo,
-  answersThree,
-  answersFour,
-  answersFive,
-  answersSix,
-  answersSeven,
-  answersEight,
-  answersNine,
-
-]
-var questions = [
-  '<h1> What is 10/2?</h1>\n',
-  '<h1>Who invented JavaScript?</h1>\n',
-  '<h1>Which one of these is a JavaScript package manager?</h1>\n',
-  '<h1> Which tool can you use to ensure code quality?</h1>\n',
-  '<h1>Which of the following is not JavaScript Data Types?\n',
-  '<h1>Which company developed JavaScript?</h1>\n',
-  '<h1> Inside which HTML element do we put the JavaScript?</h1>\n',
-  '<h1> Which of the following is correct about features of JavaScript?</h1>\n',
-  '<h1>Choose the correct JavaScript syntax to change the content of the following HTML code</h1>\n',
-
-]
 var startButton = document.querySelector("#start");
 var intro = document.querySelector(".landing");
 var nextButton = document.querySelector('#next');
@@ -128,6 +51,44 @@ let questionBank = [
       "Number",
       "Boolean",
       "Float"
+    ],
+    answer: "Float",
+  },
+  {
+    q: "Which company developed JavaScript?",
+    choices: [
+      "IBM",
+      "Sun Microsystems",
+      "Bell Labs",
+      "Netscape"
+    ],
+    answer: "Netscape",
+  },
+  {
+    q: "Inside which HTML element do we put the JavaScript?",
+    choices: [
+      "<style>",
+      "<meta>",
+      "<script>"
+    ],
+    answer: "<style>",
+  },
+  {
+    q: "Which of the following is correct about features of JavaScript?",
+    choices: [
+      "Less server interaction",
+      "Increased interactivity",
+      "Richer interfaces",
+      "All of the above"
+    ],
+    answer: "All of the above",
+  },
+  {
+    q: "Choose the correct JavaScript syntax to change the content of the following HTML code",
+    choices: [
+      "Client-side JavaScript does not allow the reading or writing of files",
+      "JavaScript doesn't have any multi-threading or multiprocessor capabilities",
+      "All of the above"
     ],
     answer: "Float",
   },
