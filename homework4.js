@@ -1,15 +1,3 @@
-var questions = [
-  '<h1> What is 10/2?</h1>\n',
-  '<h1>Who invented JavaScript?</h1>\n',
-  '<h1>Which one of these is a JavaScript package manager?</h1>\n',
-  '<h1> Which tool can you use to ensure code quality?</h1>\n',
-  '<h1>Which of the following is not JavaScript Data Types?\n',
-  '<h1>Which company developed JavaScript?</h1>\n',
-  '<h1> Inside which HTML element do we put the JavaScript?</h1>\n',
-  '<h1> Which of the following is correct about features of JavaScript?</h1>\n',
-  '<h1>Choose the correct JavaScript syntax to change the content of the following HTML code</h1>\n',
-
-]
 var answersOne = [
   "<button>2</button>",
   "<button>5</button>",
@@ -76,29 +64,81 @@ var answerArray = [
   answersNine,
 
 ]
+var questions = [
+  '<h1> What is 10/2?</h1>\n',
+  '<h1>Who invented JavaScript?</h1>\n',
+  '<h1>Which one of these is a JavaScript package manager?</h1>\n',
+  '<h1> Which tool can you use to ensure code quality?</h1>\n',
+  '<h1>Which of the following is not JavaScript Data Types?\n',
+  '<h1>Which company developed JavaScript?</h1>\n',
+  '<h1> Inside which HTML element do we put the JavaScript?</h1>\n',
+  '<h1> Which of the following is correct about features of JavaScript?</h1>\n',
+  '<h1>Choose the correct JavaScript syntax to change the content of the following HTML code</h1>\n',
+
+]
 var startButton = document.querySelector("#start");
 var intro = document.querySelector(".landing");
 var nextButton = document.querySelector('#next');
 var quizContent = document.querySelector('.quiz');
 var currentQuestion = 0;
-
+var score = 0;
 let questionBank = [
   {
     q: "What is 10/2?",
-    choices: [1, 3, 4, 5],
-    answer: '5',
+    choices: [
+      1,
+      3,
+      4,
+      5
+    ],
+    answer: 5,
   },
   {
-    q: "Who invented JavaScript??",
-    choices: ["Brendan Eich", "Sheryl Sandberg", "Douglas Crockford"],
+    q: "Who invented JavaScript?",
+    choices: [
+      "Brendan Eich",
+      "Sheryl Sandberg",
+      "Douglas Crockford"
+    ],
     answer: "Brendan Eich",
-  }
+  },
+  {
+    q: "Which one of these is a JavaScript package manager?",
+    choices: [
+      "npm",
+      "TypeScript",
+      "Node.js",
+    ],
+    answer: "npm",
+  },
+  {
+    q: "Which tool can you use to ensure code quality?",
+    choices: [
+      "ESLint",
+      "RequireJS",
+      "jQuery",
+      "Angular"
+    ],
+    answer: "ESLint",
+  },
+  {
+    q: "Which of the following is not JavaScript Data Types?",
+    choices: [
+      "Undefined",
+      "Number",
+      "Boolean",
+      "Float"
+    ],
+    answer: "Float",
+  },
 
 ];
 let time = questionBank.length * 10
 
-startButton.addEventListener('click', function (event) {
-  event.preventDefault();
+startButton.addEventListener('click', renderQs);
+
+function renderQs() {
+
   //remove the start button
   startButton.remove();
 
@@ -112,6 +152,7 @@ startButton.addEventListener('click', function (event) {
   //   return option
   // })
   questionBank[currentQuestion].choices.map((options) => {
+
     let choiceEl = document.createElement("button")
 
     choiceEl.textContent = options
@@ -120,54 +161,35 @@ startButton.addEventListener('click', function (event) {
     document.querySelector('.choice-wrapper').appendChild(choiceEl)
     choiceEl.onclick = checkAndChange
 
-  })
-
-  currentQuestion++;
-
-
-
-});
-
+  }
+  )
+}
 function checkAndChange() {
-  //if its correct add green styling for .5 sec, increment the score,go to nextQuestion
+  //if its correct add green styling , increment the score,go to nextQuestion
   let element = this
 
-  if (element.textContent == questionBank[currentQuestion - 1].answer) {
+  if (element.textContent == questionBank[currentQuestion].answer) {
     element.classList.add('success')
-    console.log(element)
+    score += 25;
+    console.log(score)
   } else {
     //if wrong add red styling , decrement the score, decrement the time and go to next question 
     element.classList.add('fail')
+    score -= 25;
   }
 
-  //remove the styling
+  //remove the styling aafter .5 sec
   setTimeout(() => {
-    if (element.classList.contains('fail')) {
-      element.classList.remove('fail')
-    } else {
-      element.classList.remove('success')
-    }
+    element.setAttribute('class', 'selection')
+    document.querySelectorAll('.selection').forEach(el => el.remove())
+    currentQuestion++;
+    renderQs()
   }, 500)
+
+
+
 
 }
 
-// mainContent.addEventListener('click', function (event) {
-//   event.preventDefault();
-//   currentQuestion++;
 
-//   //display next question
-//   mainContent.innerHTML = questions[currentQuestion - 1] + answerArray[currentQuestion - 1];
-//   mainContent.setAttribute('style', "display:inline-block");
-//   var count = 90;
-//   var interval = setInterval(function () {
-//     document.getElementById('count').innerHTML = count;
-//     count--;
-//     if (count === 0) {
-//       clearInterval(interval);
-
-//       alert("You're out of time!");
-//     }
-//   }, 1000);
-
-// });
 
