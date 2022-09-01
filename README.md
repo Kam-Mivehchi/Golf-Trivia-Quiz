@@ -8,3 +8,7 @@ This is a responsive quiz application that utilizes JavScript Web API's to dynam
 ## Deployment
 
 ## Screen Shots
+
+![image](https://user-images.githubusercontent.com/90432404/187834701-d9503e3a-d3b9-46ce-9b00-73d02fb65497.png)
+![image](https://user-images.githubusercontent.com/90432404/187834711-16fce9e0-1da2-41b5-a9b5-8fcd01905bb3.png)
+
