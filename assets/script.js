@@ -266,4 +266,9 @@ function displayScores() {
 startBtn.addEventListener('click', startQuiz)
 document.getElementById("scoreLink").addEventListener("click", displayScores)
 
+//reset quiz
+document.getElementById("logo").addEventListener("click", () => {
+  window.location = "/"
+})
+
 

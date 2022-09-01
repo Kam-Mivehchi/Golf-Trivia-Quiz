@@ -56,17 +56,20 @@ button:hover {
     border: 1px solid #92B4EC;
 }
 
-#logo {
+#logo button {
     font-size: 150%;
+    border: none;
+}
+
+#logo button:hover {
+    border: 1px solid #92B4EC
 }
 
 .hidden {
     display: none;
 }
 
-.question {
-    color: royalblue;
-}
+
 
 #options {
     display: flex;
